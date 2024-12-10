@@ -10,11 +10,11 @@ body {
   /* Header Styles */
   .header {
     background: repeating-linear-gradient(
-      -45deg, /* Creates slanted lines at a 45-degree angle */
-      #025a2b, /* Dark blue color */
-      #1a2a40 20px, /* 20px of dark blue */
-      #3c4a60 20px, /* Start light blue color */
-      #3c4a60 40px /* 20px of light blue */
+      -45deg, 
+      #025a2b, 
+      #1a2a40 20px, 
+      #3c4a60 20px, 
+      #3c4a60 40px 
     );
     height: 100px;
     display: flex;
