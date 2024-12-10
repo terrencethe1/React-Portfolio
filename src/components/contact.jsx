@@ -1,24 +1,24 @@
 import React, { useState } from "react";
 
-// Contact component
+
 const Contact = () => {
-  // State to manage form data
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  // State to manage form errors
+
   const [errors, setErrors] = useState({});
 
-  // Handle input change and update form data state
+ 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Validate form data
+
   const validate = () => {
     const newErrors = {};
     if (!formData.name) newErrors.name = "Name is required";
@@ -32,10 +32,28 @@ const Contact = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  // Handle form submission
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
       alert("Message sent successfully!");
-      // Reset form data
+    
       setFormData({ name: "", email: "", message: "" });
+      setErrors({});
+    }
+  };
+
+  return (
+    <div className="contact">
+      <h1>Contact</h1>
+      <form onSubmit={handleSubmit} className="form">
+        <div className="form-group">
+          <label>Name:</label>
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+          />
+          {errors.name && <p className="error">{errors.name}</p>}
+        </div>
