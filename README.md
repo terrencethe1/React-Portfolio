@@ -11,6 +11,8 @@
  
  
   ## Demo 
+  https://react-portfolio-terry.netlify.app
+  
  
   
   
